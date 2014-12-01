@@ -41,7 +41,7 @@
 
     function prepareGame() {
         var background = new createjs.Shape();
-        background.graphics.beginFill('rgba(255,0,0,0.1)');
+        background.graphics.beginFill(Color.getRandomColor());
         background.graphics.drawRect(0, 0, window.innerWidth, window.innerHeight);
 
         background.on('mousedown', _handleCanvasTap);

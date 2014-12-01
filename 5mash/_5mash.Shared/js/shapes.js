@@ -1,5 +1,5 @@
 ﻿(function () {
-    'use strict';       
+    'use strict';
 
     function getRandomShape(x, y) {
         var strokeColor = Color.getRandomColor(),
@@ -19,27 +19,33 @@
         shape.graphics.beginFill(fillColor);
         shape.snapToPixel = true;
 
-        var shapeRandom = Math.floor(Math.random() * 3);
+        var shapeRandom = Math.floor(Math.random() * 5);
 
         switch (shapeRandom) {
-            case 'triangle':
+            case 0: //triangle
+                shape.graphics.drawPolyStar(0, 0, width / 2, 3, 0, 120);
+                shape.x = x;
+                shape.y = y;
                 break;
-            case 'star':
+            case 1: //5-point star
+                shape.graphics.drawPolyStar(0, 0, width / 2, 5, 0.6, -90);
+                shape.x = x;
+                shape.y = y;
                 break;
-            case 0:
-                shape.graphics.drawRoundRect(0, 0, width, height, strokeStyle.thickness * 4);
+            case 2: //rounded rectangle
+                shape.graphics.drawRoundRect(-width / 2, -height / 2, width, height, strokeStyle.thickness * 4);
                 shape.x = newX;
                 shape.y = newY;
                 break;
-            case 1:
+            case 3: //circle
                 // circles draw around a point, so use the original x and y here.
                 shape.graphics.drawCircle(0, 0, width / 2);
                 shape.x = x;
                 shape.y = y;
                 break;
-            case 2:
+            case 4: //rectangle
             default:
-                shape.graphics.drawRect(0, 0, width, height);
+                shape.graphics.drawRect(-width / 2, -height / 2, width, height);
                 shape.x = newX;
                 shape.y = newY;
                 break;

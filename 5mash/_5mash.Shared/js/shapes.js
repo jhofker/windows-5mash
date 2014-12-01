@@ -63,7 +63,15 @@
             default:
                 return shape;
         }
+        shape.graphics.endFill();
         shape.graphics.endStroke();
+
+        //var shadowRandom = Utils.getRandomNumber(0, 20);
+        //shape.shadow = new createjs.Shadow('rgba(0,0,0,.5)',
+        //    shadowRandom,
+        //    shadowRandom,
+        //    shadowRandom);
+
         return shape;
     }
 

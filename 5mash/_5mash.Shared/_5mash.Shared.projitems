@@ -11,5 +11,6 @@
     <Content Include="$(MSBuildThisFileDirectory)js\game.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\lib\createjs-2013.12.12.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\shapes.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\Utils.js" />
   </ItemGroup>
 </Project>

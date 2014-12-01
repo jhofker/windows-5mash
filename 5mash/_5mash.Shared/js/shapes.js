@@ -5,9 +5,13 @@
         var strokeColor = Color.getRandomColor(),
             fillColor = Color.getRandomColor(),
             borderThickness = 8,
-            strokeStyle = { thickness: borderThickness },
-            width = 140,
-            height = 140,
+            strokeStyle = {
+                thickness: borderThickness,
+                caps: 'round',
+                joint: 'round'
+            },
+            width = 160,
+            height = 160,
             offsetX = width / 2,
             offsetY = height / 2,
             newX = x - offsetX,
@@ -15,15 +19,15 @@
             shape = new createjs.Shape();
 
         shape.graphics.beginStroke(strokeColor);
-        shape.graphics.setStrokeStyle(strokeStyle.thickness);
+        shape.graphics.setStrokeStyle(strokeStyle.thickness, strokeStyle.caps, strokeStyle.joint);
         shape.graphics.beginFill(fillColor);
         shape.snapToPixel = true;
 
-        var shapeRandom = Math.floor(Math.random() * 5);
+        var shapeRandom = Utils.getRandomNumber(0, 4);
 
         switch (shapeRandom) {
             case 0: //triangle
-                shape.graphics.drawPolyStar(0, 0, width / 2, 3, 0, 120);
+                shape.graphics.drawPolyStar(0, 0, width / 2, 3, 0, 30);
                 shape.x = x;
                 shape.y = y;
                 break;
@@ -50,7 +54,7 @@
                 shape.y = newY;
                 break;
         }
-
+        shape.graphics.endStroke();
         return shape;
     }
 

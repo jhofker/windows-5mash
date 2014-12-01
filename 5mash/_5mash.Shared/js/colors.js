@@ -5,7 +5,7 @@
         var letters = '456789ABCD'.split(''),
             color = '#';
         for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 10)];
+            color += letters[Math.floor(Utils.getRandomNumber(0, 9))];
         }
         return color;
     }

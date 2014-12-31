@@ -6,6 +6,12 @@
     <SharedGUID>cb02bd9c-8387-4b88-8e8e-c9ea9801dc39</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\orange-butterfly.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\orange-flower.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\purple-flower.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-butterfly.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-flower.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\yellow-flower.svg" />
     <Content Include="$(MSBuildThisFileDirectory)js\colors.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\game.js" />

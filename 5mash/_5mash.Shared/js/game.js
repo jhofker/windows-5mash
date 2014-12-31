@@ -30,12 +30,28 @@
 
     function loadAssets() {
         preload = new createjs.LoadQueue();
+        preload.installPlugin(createjs.Sound);
+
         preload.onComplete = prepareGame;
 
-        var manifest = {
-        };
+        var images = [
+            { id: 'orange-butterfly' },
+            { id: 'orange-flower' },
+            { id: 'white-butterfly' },
+            { id: 'purple-flower' },
+            { id: 'white-flower' },
+            { id: 'yellow-flower' },
+        ];
 
-        //preload.loadManifest(manifest);
+        for (var i in images) {
+            i.src = '/images/nora-blanket/' + i.id + '.svg';
+        }
+
+        var manifest = [
+            '/sounds
+        ];
+
+        preload.loadManifest(manifest);
         prepareGame();
     }
 
@@ -72,6 +88,8 @@
     }
 
     function removeShape(shape) {
+        shape.off('mousedown');
+
         createjs.Tween.get(shape, { override: true })
         .to({ scaleX: 0, scaleY: 0 }, timings.fast, createjs.Ease.quadOut)
         .call(function () {

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -12,11 +12,18 @@
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-butterfly.svg" />
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-flower.svg" />
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\yellow-flower.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)js\sounds.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\colors.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\game.js" />
-    <Content Include="$(MSBuildThisFileDirectory)js\lib\createjs-2013.12.12.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\lib\createjs-2014.12.12.combined.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\shapes.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\Utils.js" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_01.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_02.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_03.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_04.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_05.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_06.mp3" />
   </ItemGroup>
 </Project>

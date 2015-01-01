@@ -33,6 +33,7 @@
         preload.installPlugin(createjs.Sound);
 
         preload.onComplete = prepareGame;
+        preload.installPlugin(createjs.Sound);
 
         var images = [
             { id: 'orange-butterfly' },
@@ -48,10 +49,10 @@
         }
 
         var manifest = [
-            '/sounds
         ];
 
-        preload.loadManifest(manifest);
+        //preload.loadManifest(manifest);
+        Sounds.load();
         prepareGame();
     }
 
@@ -75,6 +76,7 @@
         shape.on('mousedown', _handleShapeTap);
 
         stage.addChild(shape);
+        Sounds.playRandomSound();
 
         var t = createjs.Tween.get(shape)
             // animate in

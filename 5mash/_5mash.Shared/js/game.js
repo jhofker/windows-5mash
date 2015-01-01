@@ -31,11 +31,13 @@
     function loadAssets() {
         preload = new createjs.LoadQueue();
         preload.onComplete = prepareGame;
+        preload.installPlugin(createjs.Sound);
 
         var manifest = {
         };
 
         //preload.loadManifest(manifest);
+        Sounds.load();
         prepareGame();
     }
 
@@ -59,6 +61,7 @@
         shape.on('mousedown', _handleShapeTap);
 
         stage.addChild(shape);
+        Sounds.playRandomSound();
 
         var t = createjs.Tween.get(shape)
             // animate in

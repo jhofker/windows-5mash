@@ -6,10 +6,23 @@
     <SharedGUID>cb02bd9c-8387-4b88-8e8e-c9ea9801dc39</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)js\sounds.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\colors.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\game.js" />
-    <Content Include="$(MSBuildThisFileDirectory)js\lib\createjs-2013.12.12.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\lib\createjs-2014.12.12.combined.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\shapes.js" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_01.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_01.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_02.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_02.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_03.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_03.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_04.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_04.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_05.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_05.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_06.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)sounds\electronic_click_06.wav" />
   </ItemGroup>
 </Project>

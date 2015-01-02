@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="5437KerjoStudios.5mash" Version="1.1.0.0" Publisher="CN=745C859F-97BB-44ED-A750-23EA46C52C5A" />
+  <Identity Name="5437KerjoStudios.5mash" Version="1.1.0.1" Publisher="CN=745C859F-97BB-44ED-A750-23EA46C52C5A" />
   <Properties>
     <DisplayName>5mash</DisplayName>
     <PublisherDisplayName>Kerjo Studios</PublisherDisplayName>

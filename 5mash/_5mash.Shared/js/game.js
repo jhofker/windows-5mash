@@ -9,13 +9,16 @@
             short: 2000,
             medium: 4000,
             long: 8000,
-        }
+        },
+        maxDimension
     ;
 
     function initialize() {
+        maxDimension = Math.max(window.innerWidth, window.innerHeight);
+
         canvas = document.getElementById('gameCanvas');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = maxDimension;
+        canvas.height = maxDimension;
 
         context = canvas.getContext('2d');
         stage = new createjs.Stage(canvas);
@@ -61,7 +64,7 @@
     function prepareGame() {
         var background = new createjs.Shape();
         background.graphics.beginFill(Color.getRandomColor());
-        background.graphics.drawRect(0, 0, window.innerWidth, window.innerHeight);
+        background.graphics.drawRect(0, 0, maxDimension, maxDimension);
 
         background.on('mousedown', _handleCanvasTap);
 

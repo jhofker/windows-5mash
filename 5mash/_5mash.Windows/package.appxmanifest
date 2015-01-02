@@ -1,47 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-
-  <Identity
-    Name="6417ec89-8cce-4cb0-9d3f-c06d0b5cc304"
-    Version="1.0.0.0"
-    Publisher="CN=Jordan" />
-
+  <Identity Name="5437KerjoStudios.5mash" Version="1.1.0.0" Publisher="CN=745C859F-97BB-44ED-A750-23EA46C52C5A" />
   <Properties>
-    <DisplayName>_5mash.Windows</DisplayName>
-    <PublisherDisplayName>Jordan</PublisherDisplayName>
+    <DisplayName>5mash</DisplayName>
+    <PublisherDisplayName>Kerjo Studios</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
     <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application 
-      Id="App"
-      StartPage="default.html">
-
-      <m2:VisualElements
-        DisplayName="_5mash.Windows"
-        Description="_5mash.Windows"
-        ForegroundText="light"
-        BackgroundColor="#464646"
-        Square150x150Logo="images\Logo.png"
-        Square30x30Logo="images\SmallLogo.png">
-
+    <Application Id="App" StartPage="default.html">
+      <m2:VisualElements DisplayName="5mash" Description="_5mash.Windows" ForegroundText="light" BackgroundColor="#FF847C" Square150x150Logo="images\logo.png" Square30x30Logo="images\SmallLogo.png" ToastCapable="false">
+        <m2:DefaultTile Square310x310Logo="images\Square310x310Logo.png" Wide310x150Logo="images\widelogo.png" Square70x70Logo="images\Square70x70Logo.png" DefaultSize="square150x150Logo" ShortName="5mash">
+        </m2:DefaultTile>
         <m2:SplashScreen Image="images\splashscreen.png" />
-
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
       </m2:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
-
 </Package>

@@ -27,8 +27,7 @@
         //Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)
         var instance = Sound.play(soundId, Sound.INTERRUPT_LATE, 0, 0, false, 1);
         if (instance == null || instance.playState == Sound.PLAY_FAILED) {
-            throw 'Error playing sound';
-
+            console.log('Error playing sound: ' + soundId);
         }
     }
 

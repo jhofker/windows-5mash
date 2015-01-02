@@ -52,7 +52,9 @@
         ];
 
         //preload.loadManifest(manifest);
-        Sounds.load();
+        if (!WinJS.Utilities.isPhone) {
+            Sounds.load();
+        }
         prepareGame();
     }
 

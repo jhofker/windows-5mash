@@ -1,4 +1,4 @@
-/*!
+Ôªø/*!
 * CreateJS
 * Visit http://createjs.com/ for documentation, updates and examples.
 *
@@ -20835,7 +20835,7 @@ createjs.indexOf = function (array, searchElement) {
 	 * <ul><li>No guarantee of smooth looping when using HTML or Flash audio.  If you have a track that needs to loop
 	 * smoothly and you are supporting non-web audio browsers, do not use audio sprites for that sound if you can avoid it.</li>
 	 * <li>No guarantee that HTML audio will play back immediately, especially the first time. In some browsers (Chrome!),
-	 * HTML audio will only load enough to play through ñ so we rely on the ìcanplaythroughî event to determine if the audio is loaded.
+	 * HTML audio will only load enough to play through ‚Äì so we rely on the ‚Äúcanplaythrough‚Äù event to determine if the audio is loaded.
 	 * Since audio sprites must jump ahead to play specific sounds, the audio may not yet have downloaded.</li>
 	 * <li>Audio sprites share the same core source, so if you have a sprite with 5 sounds and are limited to 2
 	 * concurrently playing instances, that means you can only play 2 of the sounds at the same time.</li></ul>

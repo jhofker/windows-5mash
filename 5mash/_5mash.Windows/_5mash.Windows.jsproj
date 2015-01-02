@@ -51,6 +51,8 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>_5mash.Windows_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>3E30CED4BBD61C06863974FCF6C1A6460A74053D</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">

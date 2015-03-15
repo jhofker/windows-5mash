@@ -40,9 +40,11 @@
                 shape.y = y;
                 break;
             case 2: //rounded rectangle
-                shape.graphics.drawRoundRect(-width / 2, -height / 2, width, height, strokeStyle.thickness * 4);
-                shape.x = newX;
-                shape.y = newY;
+                shape.graphics.drawRoundRect(newX, newY, width, height, strokeStyle.thickness * 4);
+                shape.x = x;
+                shape.y = y;
+                shape.regX = x;
+                shape.regY = y;
                 shape.rotation = angle;
                 break;
             case 3: //circle
@@ -53,9 +55,11 @@
                 shape.rotation = angle;
                 break;
             case 4: //rectangle
-                shape.graphics.drawRect(-width / 2, -height / 2, width, height);
-                shape.x = newX;
-                shape.y = newY;
+                shape.graphics.drawRect(newX, newY, width, height);
+                shape.x = x;
+                shape.y = y;
+                shape.regX = x;
+                shape.regY = y;
                 shape.rotation = angle;
                 break;
             case 5: //pentagon
@@ -74,8 +78,6 @@
         //    shadowRandom,
         //    shadowRandom);
 
-        shapes.push(shape);
-
         return shape;
     }
 
@@ -83,11 +85,13 @@
         var stage = shape.stage;
         shape.off('mousedown');
 
-        createjs.Tween.get(shape, { override: true })
-        .to({ scaleX: 0, scaleY: 0 }, Shared.timings.fast, createjs.Ease.quadOut)
-        .call(function () {
-            stage.removeChild(this);
-        });
+        if (stage) {
+            createjs.Tween.get(shape, { override: true })
+            .to({ scaleX: 0, scaleY: 0 }, Shared.timings.fast, createjs.Ease.quadOut)
+            .call(function () {
+                stage.removeChild(this);
+            });
+        }
     }
 
     WinJS.Namespace.define('Shapes', {

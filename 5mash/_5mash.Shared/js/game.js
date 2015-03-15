@@ -1,7 +1,8 @@
 ﻿(function () {
     'use strict';
     var canvas, context, stage,
-        preload,        
+        preload,
+        accelerometer = Windows.Devices.Sensors.Accelerometer.getDefault(),
         maxDimension
     ;
 
@@ -60,6 +61,11 @@
 
         background.on('mousedown', _handleCanvasTap);
 
+        if (accelerometer) {
+            accelerometer.addEventListener('readingchanged', _handleAccelerometerChanged);
+            accelerometer.addEventListener('shaken', _handleAccelerometerShaken);
+        }
+
         stage.addChild(background);
     }
 
@@ -84,6 +90,14 @@
 
     function _handleShapeTap(e) {
         Shapes.removeShape(this);
+    }
+
+    function _handleAccelerometerChanged(e) {
+        var reading = e.reading;
+    }
+
+    function _handleAccelerometerShaken(e) {
+
     }
 
     WinJS.Namespace.define('Game', {

@@ -1,15 +1,7 @@
 ﻿(function () {
     'use strict';
     var canvas, context, stage,
-        preload,
-        timings = {
-            fast: 250,
-            moderate: 500,
-            slow: 1000,
-            short: 2000,
-            medium: 4000,
-            long: 8000,
-        },
+        preload,        
         maxDimension
     ;
 
@@ -72,11 +64,11 @@
     }
 
     function _handleCanvasTap(e) {
-        var shape = Shape.getRandomShape(e.stageX, e.stageY);
+        var shape = Shapes.getRandomShape(e.stageX, e.stageY);
 
         setTimeout(function () {
-            removeShape(shape);
-        }, timings.long);
+            Shapes.removeShape(shape);
+        }, Shared.timings.long);
 
         shape.on('mousedown', _handleShapeTap);
 
@@ -85,23 +77,13 @@
 
         var t = createjs.Tween.get(shape)
             // animate in
-            .to({ scaleX: 1.4, scaleY: 1.4 }, timings.short, createjs.Ease.backInOut)
+            .to({ scaleX: 1.4, scaleY: 1.4 }, Shared.timings.short, createjs.Ease.backInOut)
             // "breathe" while alive.
-            .to({ scaleX: 1.3, scaleY: 1.3 }, timings.long - timings.short, createjs.Ease.backInOut);
+            .to({ scaleX: 1.3, scaleY: 1.3 }, Shared.timings.long - Shared.timings.short, createjs.Ease.backInOut);
     }
 
     function _handleShapeTap(e) {
-        removeShape(this);
-    }
-
-    function removeShape(shape) {
-        shape.off('mousedown');
-
-        createjs.Tween.get(shape, { override: true })
-        .to({ scaleX: 0, scaleY: 0 }, timings.fast, createjs.Ease.quadOut)
-        .call(function () {
-            stage.removeChild(this);
-        });
+        Shapes.removeShape(this);
     }
 
     WinJS.Namespace.define('Game', {

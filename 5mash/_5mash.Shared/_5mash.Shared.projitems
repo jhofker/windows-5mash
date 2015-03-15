@@ -12,6 +12,7 @@
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-butterfly.svg" />
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\white-flower.svg" />
     <Content Include="$(MSBuildThisFileDirectory)images\nora-blanket\yellow-flower.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)js\shared.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\sounds.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\colors.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />

@@ -1,6 +1,8 @@
 ﻿(function () {
     'use strict';
 
+    var shapes = [];
+
     function getRandomShape(x, y) {
         var strokeColor = Color.getRandomColor(),
             fillColor = Color.getRandomColor(),
@@ -72,10 +74,24 @@
         //    shadowRandom,
         //    shadowRandom);
 
+        shapes.push(shape);
+
         return shape;
     }
 
-    WinJS.Namespace.define('Shape', {
+    function removeShape(shape) {
+        var stage = shape.stage;
+        shape.off('mousedown');
+
+        createjs.Tween.get(shape, { override: true })
+        .to({ scaleX: 0, scaleY: 0 }, Shared.timings.fast, createjs.Ease.quadOut)
+        .call(function () {
+            stage.removeChild(this);
+        });
+    }
+
+    WinJS.Namespace.define('Shapes', {
         getRandomShape: getRandomShape,
+        removeShape: removeShape,
     });
 })();
